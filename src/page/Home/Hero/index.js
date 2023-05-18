@@ -1,13 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {DataHero} from "../../../FakeBack/DataHero";
 import left from "../../../img/leftLine.svg"
 import right from "../../../img/rightLine.svg"
 import {FiArrowRight} from "react-icons/fi";
 import {BsFillGeoAltFill, BsFillTelephoneFill} from "react-icons/bs";
+import ModalWindow from "./ModalWindow";
 
 const Hero = () => {
+    const [modal, setModal] = useState(false)
     return (
-        <div id="hero">
+        <div id="hero" className="overflow-hidden">
             <div className="container text-white py-48 relative">
                 <div className="flex items-end justify-center">
                     <div>
@@ -24,10 +26,19 @@ const Hero = () => {
                 <p className="w-[32%] mx-auto pb-4">{DataHero.smallText}</p>
                 <div>
                     <div className="w-36 bg-red-600 h-[2px] mx-auto"></div>
-                    <button
+                    <button  onClick={() => setModal(!modal)}
                         className="flex items-center mx-auto  bg-red-600 animate-pulse py-3 px-6 border-2 my-2 border-red-600">Reserve Your Table <span className="pl-2"><FiArrowRight/></span>
                     </button>
                     <div className="w-36 bg-red-600 h-[2px] mx-auto"></div>
+                    <div style={{
+                        position: "absolute",
+                        right: "-450px",
+                        top: "150px",
+                        transform: modal ? "translateX(-600px)" : "",
+                        transition: "800ms"
+                    }}>
+                        <ModalWindow />
+                    </div>
                 </div>
                 <div className="w-[2px] h-96 bg-gray-500 absolute left-0 bottom-14"></div>
                 <div className="flex items-center absolute left-5 bottom-10">

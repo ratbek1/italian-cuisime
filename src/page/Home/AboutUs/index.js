@@ -19,8 +19,8 @@ const AboutUs = () => {
                 <p className="w-[42%]">{DataAboutUs.smallText}</p>
             </div>
             <div className="flex justify-between pt-14">
-                <img src={img1} width={650} alt=""/>
-                <img src={img2} width={650} alt=""/>
+                <img src={img1} width={650} className="object-cover" alt=""/>
+                <img src={img2} width={650} className="object-cover" alt=""/>
             </div>
         </div>
     );

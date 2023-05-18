@@ -3,26 +3,48 @@ import left from "../../../img/leftLine.svg";
 import img1 from "../../../img/slider.img1.png"
 import img2 from "../../../img/slider.img2.png"
 import {DataBestSellers} from "../../../FakeBack/DataBestSellers";
+import Slider from "react-slick";
 
 const BestSellers = () => {
+    const settings = {
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 2000,
+        autoplaySpeed: 2000,
+        prevArrow: false
+    };
     return (
         <div className="container text-white py-24 flex">
-            <div>
-                <div className="flex items-center">
-                    <div>
-                        <img src={left} className="ml-3" alt=""/>
-                        <div className="w-[55px] h-[3px] my-1 bg-red-600"></div>
+                <div>
+                    <div className="flex items-center">
+                        <div>
+                            <img src={left} className="ml-3" alt=""/>
+                            <div className="w-[55px] h-[3px] my-1 bg-red-600"></div>
+                        </div>
+                        <h1 className="title text-4xl mx-8">{DataBestSellers.title}</h1>
                     </div>
-                    <h1 className="title text-4xl mx-8">{DataBestSellers.title}</h1>
+                    <h1 className="font-serif text-4xl w-80 py-10">{DataBestSellers.BigTitle}</h1>
+                    <p className="w-[48%]">{DataBestSellers.smallText}</p>
                 </div>
-                <h1 className="font-serif text-4xl w-80 py-10">{DataBestSellers.BigTitle}</h1>
-                <p className="w-[48%]">{DataBestSellers.smallText}</p>
+                <div className="centers">
+                    <Slider {...settings}>
+                        <div>
+                            <img src={img1} alt=""/>
+                        </div>
+                        <div>
+                            <img src={img2} alt=""/>
+                        </div>
+                        <div>
+                            <img src={img1} alt=""/>
+                        </div>
+                        <div>
+                            <img src={img2} alt=""/>
+                        </div>
+                    </Slider>
+                </div>
             </div>
-            <div className="flex">
-                <img src={img1} alt=""/>
-                <img src={img2} alt=""/>
-            </div>
-        </div>
     );
 };
 
