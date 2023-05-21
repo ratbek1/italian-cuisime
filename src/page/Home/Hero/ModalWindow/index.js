@@ -2,9 +2,9 @@ import React from 'react';
 import {RiUserHeartFill} from "react-icons/ri";
 import {ImPhone} from "react-icons/im";
 
-const ModalWindow = () => {
+const ModalWindow = ({modal}) => {
     return (
-        <div className="bg-[#1B2026] shadow shadow-white shadow-xl w-80 py-14 px-7 mx-auto h-72 rounded-2xl">
+        <div className="bg-[#1B2026] shadow shadow-white shadow-xl w-80 py-14 px-7 mx-auto h-72 rounded-2xl z-20">
             <div className="flex items-center">
                 <div className="bg-gray-500 w-14 h-14 rounded-[50%] flex items-center justify-center mr-4">
                     <RiUserHeartFill className="text-2xl"/>
