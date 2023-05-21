@@ -14,13 +14,13 @@ const AboutUs = () => {
                 </div>
                 <h1 className="title text-4xl mx-8">{DataAboutUs.title}</h1>
             </div>
-            <div className="flex justify-between items-center">
-                <h1 className="font-serif text-4xl w-80">{DataAboutUs.BigTitle}</h1>
-                <p className="w-[42%]">{DataAboutUs.smallText}</p>
+            <div className="md:flex justify-between items-center">
+                <h1 className="font-serif md:text-4xl w-80 sm:my-3 text-3xl">{DataAboutUs.BigTitle}</h1>
+                <p className="md:w-[42%]">{DataAboutUs.smallText}</p>
             </div>
-            <div className="flex justify-between pt-14">
-                <img src={img1} width={650} className="object-cover" alt=""/>
-                <img src={img2} width={650} className="object-cover" alt=""/>
+            <div className="xl:flex justify-between pt-14">
+                <img src={img1} className="object-fill sm:py-4 sm:mx-auto" alt=""/>
+                <img src={img2} className="object-fill sm:py-4 sm:mx-auto" alt=""/>
             </div>
         </div>
     );

@@ -22,8 +22,8 @@ const Hero = () => {
                         <div className="w-[55px] h-[3px] my-1 bg-red-600"></div>
                     </div>
                 </div>
-                <h1 className="font-bold text-6xl py-6 text-center">{DataHero.bigText}</h1>
-                <p className="w-[32%] mx-auto pb-4">{DataHero.smallText}</p>
+                <h1 className="font-bold text-6xl py-6 text-center -z-10">{DataHero.bigText}</h1>
+                <p className="w-[32%] mx-auto pb-4  sm:text-center">{DataHero.smallText}</p>
                 <div>
                     <div className="w-36 bg-red-600 h-[2px] mx-auto"></div>
                     <button  onClick={() => setModal(!modal)}
@@ -35,29 +35,29 @@ const Hero = () => {
                         right: "-450px",
                         top: "150px",
                         transform: modal ? "translateX(-600px)" : "",
-                        transition: "800ms"
+                        transition: "800ms",
                     }}>
-                        <ModalWindow />
+                        <ModalWindow/>
                     </div>
                 </div>
                 <div className="w-[2px] h-96 bg-gray-500 absolute left-0 bottom-14"></div>
-                <div className="flex items-center absolute left-5 bottom-10">
+                <div className=" md:flex items-center absolute left-5 bottom-10">
                     <h2>{DataHero.GeoTitle}</h2>
-                    <div className="w-20 h-[2px] bg-gray-500 rounded-b mx-4"></div>
-                    <a href="" className="text-red-600 mr-1">
+                    <div className="w-20 h-[2px] bg-gray-500 rounded-b md:mx-4 sm:my-3"></div>
+                    <a href="" className="hidden md:block text-red-600 mr-1">
                         <BsFillGeoAltFill/>
                     </a>
                     <p>{DataHero.GeoText}</p>
                 </div>
-                <div className="flex items-center absolute right-5 bottom-10">
+                <div className="md:flex items-center absolute right-5 bottom-10">
                     <h2>{DataHero.PhoneTitle}</h2>
-                    <div className="w-20 h-[2px] bg-gray-500 rounded-b mx-4"></div>
-                    <a href="" className="text-red-600 mr-1">
+                    <div className="w-20 h-[2px] bg-gray-500 rounded-b md:mx-4 sm:my-3"></div>
+                    <a href="" className="hidden md:block text-red-600 mr-1">
                         <BsFillTelephoneFill/>
                     </a>
                     <a href="">{DataHero.number}</a>
                 </div>
-                <div className="min-w-full h-[2px] bg-gray-500 bottom-5 absolute"></div>
+                <div className="min-w-full hidden md:block h-[2px] bg-gray-500 bottom-5 absolute"></div>
             </div>
         </div>
     );

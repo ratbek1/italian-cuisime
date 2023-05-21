@@ -6,9 +6,9 @@ const Footer = () => {
     return (
         <div className="bg-black">
             <div className="container">
-                <div className=" border-b-2 border-gray-500 text-white flex items-center justify-between pt-20 pb-4">
+                <div className="  border-b-2 border-gray-500 text-white flex items-center justify-between pt-20 pb-4">
                     <h1 className="font-serif text-2xl">Restaurant</h1>
-                    <div className="flex">
+                    <div className="hidden md:flex">
                         <h3 className="mx-8">interior</h3>
                         <h3 className="mx-8">About us</h3>
                         <h3 className="mx-8">Menu</h3>
