@@ -52,7 +52,7 @@ const BestSellers = () => {
                             </div>
                         </Slider>   
                     </div>
-                    <div className="md:hidden w-[2px] h-72 bg-gray-500 absolute left-0 bottom-24"></div>
+                    {/*<div className="md:hidden w-[2px] h-72 bg-gray-500 absolute left-0 bottom-24"></div>*/}
                     <div className="sm:block md:hidden">
                         <Slider  {...settings1}>
                             <div className="md:px-4 sm:px-2">
