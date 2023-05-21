@@ -55,7 +55,7 @@ const Header = () => {
                 </button>
                 <button style={{display: burger ? "block" : "none"}}
                     onClick={() => setBurger(false)} className="absolute right-8">
-                    <div className="rounded-[5px] rotate-[44deg] w-7 h-[2px] bg-white"></div>
+                    {/*<div className="rounded-[5px] rotate-[44deg] w-7 h-[2px] bg-white"></div>*/}
                     <div className="rounded-[5px] rotate-[-44deg] w-7 h-[2px] bg-white"></div>
                 </button>
             </div>
