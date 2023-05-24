@@ -1,4 +1,4 @@
-import React  from 'react';
+import React, {useState} from 'react';
 import left from "../../../img/leftLine.svg";
 import img1 from "../../../img/slider.img1.png"
 import img2 from "../../../img/slider.img2.png"
@@ -7,20 +7,21 @@ import Slider from "react-slick";
 import {TfiAngleDoubleRight} from "react-icons/tfi";
 
 const BestSellers = () => {
+    const [rotate, setRotate] = useState(false)
     const settings = {
         infinite: true,
         slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: false,
         speed: 1000,
-        nextArrow: <TfiAngleDoubleRight color={"white"}/>,
+        nextArrow: <TfiAngleDoubleRight color={"white"} style={{rotate ? "rotate" : ""}}/>,
         swipeToSlide: true,
     };
     const settings1 = {
         infinite: true,
         slidesToShow: 2,
         swipeToSlide: true,
-        nextArrow: <TfiAngleDoubleRight/>
+        arrows: false
     };
     return (
         <div className="container w-full text-white relative py-24 md:flex">
