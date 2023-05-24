@@ -1,16 +1,21 @@
 import React, {useState} from 'react';
+import {Link} from "react-router-dom";
+import {IoIosArrowDropleftCircle} from "react-icons/io";
+
 
 const Header = () => {
     const [burger, setBurger] = useState(false)
     return (
         <div className="z-50 sticky top-0 bg-[#1B2026] relative">
-            <div className="container flex justify-between items-center  text-white py-5 ">
-                <h1 className="font-serif font-bold text-2xl ">Restaurant</h1>
+            <div className="container flex justify-between items-center text-white py-5">
+                <Link to={"/"}>
+                    <h1 className="font-serif font-bold text-2xl ">Restaurant</h1>
+                </Link>
                 <div className="hidden md:flex md:items-center">
-                    <a href="" className="md:mx-8  hover:text-red-600">Interior</a>
-                    <a href="" className="md:mx-8  hover:text-red-600">About Us</a>
-                    <a href="" className="md:mx-8  hover:text-red-600">Menu</a>
-                    <a href="" className="md:mx-8  hover:text-red-600">Contacts</a>
+                    <Link to={"/interior"} className="md:mx-8  hover:text-red-600">Interior</Link>
+                    <Link to={"/about"} className="md:mx-8  hover:text-red-600">About Us</Link>
+                    <Link to={"/menu"} className="md:mx-8  hover:text-red-600">Menu</Link>
+                    <Link to={"/contact"} className="md:mx-8  hover:text-red-600">Contacts</Link>
                 </div>
                 <ul style={{
                     transition: "800ms",
@@ -54,9 +59,8 @@ const Header = () => {
                     <div className="md:hidden my-1 rounded-[5px] w-7 h-[2px] bg-white"></div>
                 </button>
                 <button style={{display: burger ? "block" : "none"}}
-                    onClick={() => setBurger(false)} className="absolute right-8">
-                    <div className="rounded-[5px] rotate-[44deg] w-7 h-[2px] bg-white"></div>
-                    <div className="rounded-[5px] rotate-[-44deg] w-7 h-[2px] bg-white"></div>
+                    onClick={() => setBurger(false)} className="absolute right-8 text-4xl">
+                        <IoIosArrowDropleftCircle/>
                 </button>
             </div>
         </div>

@@ -24,7 +24,7 @@ input {
     background: url("../src/img/bg.jpg") no-repeat center/cover;
     -webkit-box-shadow: 0 0 100px 100px rgba(0, 0, 0, 0.93) inset;
     -moz-box-shadow: 0 0 100px 100px rgba(0, 0, 0, 0.93) inset;
-    box-shadow: 0 0 100px 100px rgba(0, 0, 0, 0.93) inset;;
+    box-shadow: 0 0 100px 100px rgba(0, 0, 0, 0.93) inset;
 }
 .slick-prev{
     display: none!important;
