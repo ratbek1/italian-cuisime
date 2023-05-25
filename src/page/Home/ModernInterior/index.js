@@ -10,7 +10,7 @@ import Slider from "react-slick";
 const ModernInterior = () => {
     const settings = {
         infinite: true,
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
         speed: 2000,
@@ -37,10 +37,10 @@ const ModernInterior = () => {
                           strokeWidth="2"/>
                 </svg>
             </div>
-            <div className=" ">
+            <div className="  ">
                 <div className="container mx-auto flex  ">
                     {/*<Slider  {...settings}  >*/}
-                            <img src={st1}  className=" mx-2  grayscale hover:grayscale-0 " alt=""/>
+                            <img src={st1} width="426px"  className=" mx-2  grayscale hover:grayscale-0 " alt=""/>
                         <div className=" w-[501px] md:py-4">
                             <img src={st212}   className=" mb-2 grayscale hover:grayscale-0 " alt=""/>
                             <div className="flex justify-between">
@@ -48,7 +48,7 @@ const ModernInterior = () => {
                                 <img src={st211} width="49%" className="grayscale hover:grayscale-0" alt=""/>
                             </div>
                         </div>
-                            <img src={st3} width="426px" className="mx-2 " alt=""/>
+                            <img src={st3} width="426px" className="mx-2 grayscale hover:grayscale-0 " alt=""/>
                     {/*</Slider>*/}
                 </div>
 
