@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import left from "../../../img/leftLine.svg";
 import img1 from "../../../img/slider.img1.png"
 import img2 from "../../../img/slider.img2.png"
@@ -7,14 +7,13 @@ import Slider from "react-slick";
 import {TfiAngleDoubleRight} from "react-icons/tfi";
 
 const BestSellers = () => {
-    const [rotate, setRotate] = useState(false)
     const settings = {
         infinite: true,
         slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: false,
         speed: 1000,
-        nextArrow: <TfiAngleDoubleRight color={"white"} style={{rotate ? "rotate" : ""}}/>,
+        nextArrow: <TfiAngleDoubleRight color="white" />,
         swipeToSlide: true,
     };
     const settings1 = {
@@ -23,6 +22,7 @@ const BestSellers = () => {
         swipeToSlide: true,
         arrows: false
     };
+
     return (
         <div className="container w-full text-white relative py-24 md:flex">
                 <div>
@@ -51,9 +51,9 @@ const BestSellers = () => {
                             <div className="md:px-4 sm:px-2">
                                 <img src={img2} alt=""/>
                             </div>
-                        </Slider>   
+                        </Slider>
                     </div>
-                    {/*<div className="md:hidden w-[2px] h-72 bg-gray-500 absolute left-0 bottom-24"></div>*/}
+                    <div className="md:hidden w-[2px] h-72 bg-gray-500 absolute left-0 bottom-24"></div>
                     <div className="sm:block md:hidden">
                         <Slider  {...settings1}>
                             <div className="md:px-4 sm:px-2">
