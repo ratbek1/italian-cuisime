@@ -29,3 +29,9 @@ input {
 .slick-prev{
     display: none!important;
 }
+.rotated-arrow {
+    transform: rotate(180deg);
+}
+.rotate-row{
+    transform: rotate(0);
+}
