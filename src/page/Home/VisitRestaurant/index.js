@@ -6,7 +6,7 @@ import {FaTelegramPlane} from "react-icons/fa";
 
 const VisitRestaurant = () => {
     return (
-        <div className="w-[90%] mx-auto flex justify-between pb-24 ">
+        <div className="w-[90%] mx-auto flex sm:flex-col md:flex-row md:justify-between flex-col pb-24 ">
             <div>
                 <div className="flex items-center text-[#FFFFFF] ">
                     <svg width="52" height="16" viewBox="0 0 52 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,7 +38,7 @@ const VisitRestaurant = () => {
                 </div>
             </div>
             <div>
-                <div className="bg-[#EF272C] opacity-70 shadow-[5px 8px 26px rgba(86, 9, 187, 0.1)] p-10">
+                <div className="bg-[#EF272C] opacity-70 shadow-[5px 8px 26px rgba(86, 9, 187, 0.1)] p-10 md:p-5">
                     <div>
                         <h1 className="text-2xl pb-2">contact Info</h1>
                         <h1 className="flex items-center pb-2 text-2xl"><BsTelephoneOutboundFill/>+771219900</h1>

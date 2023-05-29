@@ -1,4 +1,4 @@
-import React  from "react";
+import React from "react";
 import st1 from "../../../img/mainslider1.png"
 import st21 from "../../../img/mainslider2.png"
 import st211 from "../../../img/mainslider3.png"
@@ -9,15 +9,12 @@ import Slider from "react-slick";
 
 const ModernInterior = () => {
     const settings = {
-        infinite: true,
-        slidesToShow: 3,
+        slidesToShow: 2.5,
         slidesToScroll: 1,
         autoplay: true,
         speed: 2000,
         autoplaySpeed: 2000,
         prevArrow: false,
-
-
     };
     return (
         <div className=" pb-20">
@@ -37,18 +34,21 @@ const ModernInterior = () => {
                           strokeWidth="2"/>
                 </svg>
             </div>
-            <div className="  ">
-                <div className="container mx-auto flex  ">
+            <div className=" ">
+                <div className="container mx-auto flex sm:flex-col sm:items-center md:flex-row flex-col items-center ">
                     {/*<Slider  {...settings}  >*/}
-                            <img src={st1} width="426px"  className=" mx-2  grayscale hover:grayscale-0 " alt=""/>
-                        <div className=" w-[501px] md:py-4">
-                            <img src={st212}   className=" mb-2 grayscale hover:grayscale-0 " alt=""/>
-                            <div className="flex justify-between">
-                                <img src={st21} width="49%" className=" grayscale hover:grayscale-0" alt=""/>
-                                <img src={st211} width="49%" className="grayscale hover:grayscale-0" alt=""/>
-                            </div>
+                    <div className=" mx-2 ">
+                        <img src={st3}  className="mx-2 grayscale hover:grayscale-0 " alt=""/>
                         </div>
-                            <img src={st3} width="426px" className="mx-2 grayscale hover:grayscale-0 " alt=""/>
+                    <div className=" sm:my-4 md:px-4 my-4">
+                        <img src={st1} className=" grayscale hover:grayscale-0 " alt=""/>
+                        {/*<img src={st212} className=" mb-2 grayscale hover:grayscale-0  " alt=""/>*/}
+                        {/*<div className="flex justify-between">*/}
+                        {/*    <img src={st21} width="49%" className=" grayscale hover:grayscale-0" alt=""/>*/}
+                        {/*    <img src={st211} width="49%" className="grayscale hover:grayscale-0" alt=""/>*/}
+                        {/*</div>*/}
+                    </div>
+                    <div className=""><img src={st3}  className="mx-2 grayscale hover:grayscale-0 " alt=""/></div>
                     {/*</Slider>*/}
                 </div>
 
