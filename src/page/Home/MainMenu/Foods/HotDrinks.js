@@ -24,8 +24,6 @@ const HotDrink = () => {
 
                 ))
             }
-        </div>
-    );
 };
 
 export default HotDrink;

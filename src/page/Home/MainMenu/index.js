@@ -3,9 +3,9 @@ import {AiOutlineArrowRight} from "react-icons/ai";
 import Deserts from "./Foods/Deserts";
 import {Link} from "react-router-dom";
 import ColdDrinks from "./Foods/ColdDrinks";
-
 const MainMenu = () => {
 const [food, useFood] = useState(true)
+const MainMenu = () => {
     return (
         <div className="flex flex-col justify-center items-center container pb-40 mx-auto">
             <svg width="308" height="49" className="md:w-[280px]" viewBox="0 0 308 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -68,6 +68,8 @@ const [food, useFood] = useState(true)
                     {
                         food ?  < Deserts/> : <ColdDrinks/>
                     }
+                <div className="px-32 ">
+                    <Deserts/>
                 </div>
             </div>
             <div className="flex flex-col justify-center items-center">

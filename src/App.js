@@ -4,6 +4,10 @@ import {Route, Routes} from "react-router-dom";
 import Home from "./page/Home/Home";
 import Footer from "./components/Footer";
 import Menu from "./page/Menu";
+import ModernInterior from "./page/Home/ModernInterior";
+import AboutUs from "./page/Home/AboutUs";
+import MainMenu from "./page/Home/MainMenu";
+import VisitRestaurant from "./page/Home/VisitRestaurant";
 
 function App() {
   return (
@@ -12,7 +16,10 @@ function App() {
         <Routes>
             <Route path={"/"} element={<Home/>}/>
             <Route path={"/menu"} element={<Menu/>}/>
-        </Routes>
+            <Route path={"/interior"} element={<ModernInterior/>}/>
+            <Route path={"/about"} element={<AboutUs/>}/>
+            <Route path={"/menu"} element={<MainMenu/>}/>
+            <Route path={"/contact"} element={<VisitRestaurant/>}/>
         <Footer/>
     </div>
   );
