@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {AiOutlineArrowRight} from "react-icons/ai";
 import Deserts from "./Foods/Deserts";
-
+import {Link} from "react-router-dom";
+import ColdDrinks from "./Foods/ColdDrinks";
 const MainMenu = () => {
-
-
-
+const [food, useFood] = useState(true)
+const MainMenu = () => {
     return (
         <div className="flex flex-col justify-center items-center container pb-40 mx-auto">
             <svg width="308" height="49" className="md:w-[280px]" viewBox="0 0 308 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,8 +25,8 @@ const MainMenu = () => {
                 Exceptional Quality. <br/>
                 Delightfully Delicious
             </h2>
-            <div className="flex justify-around">
-                <div className="flex flex-col bg-[#1F2731] h-max  ">
+            <div className="flex justify-around ">
+                <div className="flex flex-col bg-[#1F2731] h-max mb-5 sm:mb-5">
                     <div>
                         <button
                                 className="px-28   py-4 font-Silk w-full text-[#FFFFFF] font-semibold text-base line-[37px] focus:bg-[#EF272C]">Desserts
@@ -64,15 +64,22 @@ const MainMenu = () => {
                         <div className="w-4/6 mx-auto bg-[#E5E5E5] opacity-50 h-[.5px] "></div>
                     </div>
                 </div>
+                <div className=" lg:px-16 hidden  sm:hidden md:block md:pl-5 " >
+                    {
+                        food ?  < Deserts/> : <ColdDrinks/>
+                    }
                 <div className="px-32 ">
                     <Deserts/>
                 </div>
             </div>
             <div className="flex flex-col justify-center items-center">
                 <div className="bg-[#EF272C] h-0.5 w-[144px]"></div>
-                <div className="font-Spartan py-2 px-6 border-2 border-[#EF272C] my-4 flex justify-between text-[#FFFFFF]">
-                    VIEW FULL MENU <AiOutlineArrowRight/>
-                </div>
+                <Link to={"/menu"}>
+                    <div className="font-Spartan py-2 px-6 border-2 border-[#EF272C] my-4 flex justify-between text-[#FFFFFF]">
+                        VIEW FULL MENU <AiOutlineArrowRight/>
+                    </div>
+                </Link>
+
                 <div className="bg-[#EF272C] h-0.5 w-[144px]"></div>
             </div>
         </div>
